@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring.project</groupId>
-	<artifactId>Event</artifactId>
+	<artifactId>Spring-Microservice-Event</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Event</name>
-	<description>Microservicio Event</description>
+	<name>Spring-Microservice-Event</name>
+	<description>Microservice Event</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
