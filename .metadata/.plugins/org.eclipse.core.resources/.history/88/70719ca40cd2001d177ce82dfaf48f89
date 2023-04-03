@@ -1,6 +1,0 @@
-package com.spring.project.repository;
-
-public interface EventRepository extends JpaRepository<CartProduct, Long> {
-}
-
-

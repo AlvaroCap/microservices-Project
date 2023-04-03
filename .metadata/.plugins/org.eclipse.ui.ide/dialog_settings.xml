@@ -6,7 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-			<item value="C:\Users\aespinam\Desktop\alvaro Git\microservices-Project"/>
+			<item value="C:\Users\aespinam\Desktop\alvaro Git\microservices-Project\Spring-Microservice-Gateway"/>
+			<item value="C:\Users\aespinam\Desktop\microservices-Project"/>
 		</list>
 	</section>
 </section>
