@@ -1,0 +1,20 @@
+package com.spring.project.DTO;
+
+import java.io.Serializable;
+import java.sql.Date;
+import java.time.LocalDateTime;
+
+public class EventDTO implements Serializable{
+	
+	Long id;
+	String name;
+	String shortDesc;
+	String longDesc;
+	Date date; 
+	LocalDateTime schedule;
+	double price;
+	String siteName;
+	String siteCity;
+	int capacity;
+	String genre;
+}
