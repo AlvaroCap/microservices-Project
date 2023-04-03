@@ -1,4 +1,4 @@
-package com.spring.project.DTO;
+package com.spring.project.dto;
 
 import java.io.Serializable;
 import java.sql.Date;
