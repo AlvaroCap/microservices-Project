@@ -1,8 +1,0 @@
-spring.datasource.url=jdbc:mysql://10.80.150.107/capgeticketdb
-spring.datasource.driverClassName=com.mysql.jdbc.Driver
-spring.datasource.username=root
-spring.datasource.password=root
-spring.jpa.generate-ddl=true
-spring.jpa.hibernate.ddl-auto=create-drop
-spring.jpa.defer-datasource-initialization=true
-spring.sql.init.mode=always
