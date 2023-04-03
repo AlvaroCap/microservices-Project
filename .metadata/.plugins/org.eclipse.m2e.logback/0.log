@@ -1736,3 +1736,18 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.runti
 2023-04-03 13:06:38,702 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-03 13:06:38,729 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-04-03 13:06:38,737 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Gateway\src\test\resources
+2023-04-03 13:10:33,523 [Worker-30: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.spring.project:Spring-Microservice-Event:0.0.1-SNAPSHOT @ C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\pom.xml.
+2023-04-03 13:10:34,405 [Worker-30: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Spring-ConfigServer: com.project:Spring-ConfigServer:0.0.1-SNAPSHOT with classifier  to /Spring-ConfigServer/target/classes
+2023-04-03 13:10:35,507 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:10:35,509 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:10:35,516 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 13:10:36,998 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 13:10:37,029 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:10:37,036 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 13:20:10,157 [Worker-37: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.spring.project:Spring-Microservice-Event:0.0.1-SNAPSHOT @ C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\pom.xml.
+2023-04-03 13:20:11,654 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:20:11,655 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:20:11,663 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 13:20:12,901 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 13:20:12,921 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 13:20:12,925 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mvalverd\OneDrive - Capgemini\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
