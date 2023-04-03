@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Spring-ConfigServer/Spring-ConfigServer.iml" filepath="$PROJECT_DIR$/Spring-ConfigServer/Spring-ConfigServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-EurekaServer/Spring-EurekaServer.iml" filepath="$PROJECT_DIR$/Spring-EurekaServer/Spring-EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices-Project.iml" filepath="$PROJECT_DIR$/.idea/microservices-Project.iml" />
+    </modules>
+  </component>
+</project>
