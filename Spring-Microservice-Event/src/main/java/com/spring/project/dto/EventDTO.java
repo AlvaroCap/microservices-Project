@@ -6,6 +6,10 @@ import java.time.LocalDateTime;
 
 public class EventDTO implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String name;
 	String shortDesc;
 	String longDesc;
