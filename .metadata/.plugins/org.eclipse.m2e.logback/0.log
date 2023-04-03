@@ -573,3 +573,18 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2023-04-03 14:22:57,611 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-03 14:22:57,631 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
 2023-04-03 14:22:57,640 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\alvaro Git\microservices-Project\Spring-Gateway1\src\test\resources
+2023-04-03 14:44:36,534 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 14:44:36,558 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 14:44:36,567 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 14:48:44,445 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 14:48:44,451 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 14:48:44,454 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 14:48:56,845 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 14:48:56,850 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 14:48:56,855 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 14:49:13,021 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 14:49:13,026 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 14:49:13,030 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
+2023-04-03 14:50:20,642 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-03 14:50:20,647 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-03 14:50:20,652 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\aespinam\Desktop\microservices-Project\Spring-Microservice-Event\src\test\resources
