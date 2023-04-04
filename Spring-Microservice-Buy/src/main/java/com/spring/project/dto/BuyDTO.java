@@ -1,4 +1,6 @@
-package main.java.com.spring.project.dto;
+package com.spring.project.dto;
+
+import java.io.Serializable;
 
 public class BuyDTO implements Serializable {
     String userName;

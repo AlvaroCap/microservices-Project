@@ -3,8 +3,6 @@ package com.spring.project;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import javax.swing.text.AbstractDocument.Content;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.apache.hc.client5.http.classic.methods.HttpGet;
@@ -13,8 +11,6 @@ import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.google.common.net.HttpHeaders;
 
 @SpringBootTest
 class SpringMicroserviceEventApplicationTests_EurekaConexion {
