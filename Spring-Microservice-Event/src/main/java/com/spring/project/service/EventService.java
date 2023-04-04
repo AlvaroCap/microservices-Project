@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.spring.project.dto.EventDTO;
 import com.spring.project.model.Event;
 import com.spring.project.repository.EventRepository;
 
@@ -14,7 +15,7 @@ public class EventService {
 	@Autowired
 	private EventRepository eventRepository;
 	
-	public List<Event> findAll(){
+	public List<EventDTO> findAll(){
 		
 		return eventRepository.findAll();
 	}
