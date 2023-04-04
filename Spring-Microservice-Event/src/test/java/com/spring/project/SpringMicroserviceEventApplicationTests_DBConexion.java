@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.io.*;
 import java.sql.*;
 
 @SpringBootTest

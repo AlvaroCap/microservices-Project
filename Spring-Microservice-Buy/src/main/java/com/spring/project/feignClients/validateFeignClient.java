@@ -1,10 +1,8 @@
-package main.java.com.spring.project.feignClients;
+package com.spring.project.feignClients;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import com.ejemplos.spring.cart.response.ProductResponse;
 
 //Se añade este nombre : spring.application.name=catalog
 //Indico que voy a contactar con esa ruta
