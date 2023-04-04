@@ -13,6 +13,7 @@ import com.spring.project.service.EventService;
 @Controller
 @RequestMapping("/")
 public class EventController {
+
 	
 	@Autowired
 	private EventService eventService;
@@ -21,4 +22,5 @@ public class EventController {
 	public Set<EventDTO> findAll(){
 		return 
 	}
+
 }
