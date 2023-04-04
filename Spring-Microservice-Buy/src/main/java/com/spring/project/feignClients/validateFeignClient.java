@@ -12,6 +12,6 @@ import com.ejemplos.spring.cart.response.ProductResponse;
 
 public class validateFeignClient {
 
-    @PostMapping("/pasarela/compra")
-    public ProductResponse getProduct(@PathVariable Long id);
+    // @PostMapping("/pasarela/compra")
+    // public BuyResponse getProduct(@PathVariable Long id);
 }

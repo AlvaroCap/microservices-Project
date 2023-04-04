@@ -15,9 +15,7 @@ public class BuyController {
     private BuyDTO buyDTO;
 
     @PostMapping("/")
-    public void validateBuy(@RequestParam String userName, @RequestParam String creditCard,
-            @RequestParam String expiredMonth, @RequestParam String expiredYear, @RequestParam String cvv,
-            @RequestParam String issuer, @RequestParam String concept, @RequestParam String quantity) {
+    public void validateBuy(@RequestBody BuyDTO buyDTO) {
 
     }
 }
