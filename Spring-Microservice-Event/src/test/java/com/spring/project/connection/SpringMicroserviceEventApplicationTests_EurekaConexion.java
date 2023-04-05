@@ -1,4 +1,4 @@
-package com.spring.project;
+package com.spring.project.connection;
 
 import java.io.IOException;
 import java.sql.SQLException;
