@@ -1,6 +1,9 @@
 package com.spring.project.controller;
 
 import java.net.URI;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.spring.project.dto.EventDTO;
+import com.spring.project.error.EventNotFoundException;
 import com.spring.project.mapper.EventMapper;
 import com.spring.project.model.Event;
 import com.spring.project.service.EventService;
@@ -26,13 +30,16 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @RestController
 @RequestMapping("/event")
 public class EventController {
+	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 
 	@Autowired
 	private EventService eventService;
 	@Autowired
 	private EventMapper mapper;
 
-	@Operation(summary = "Listado de Events", description = "Devuelve un listado de los eventos registrados", tags = { "event" })
+	@Operation(summary = "Listado de Events", description = "Devuelve un listado de los eventos registrados", tags = {
+			"event" })
+
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Listado de eventos desplegado", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
@@ -41,11 +48,12 @@ public class EventController {
 	@GetMapping()
 	public List<EventDTO> findAll() {
 		List<Event> events = eventService.findAll();
+		logger.info("------ readStudent (GET) ");
+
 		return mapper.convertToDto(events);
 	}
 
-	@Operation(summary = "Añadir events", description = "Añadir un Evento al listado", tags = {
-			"event" })
+	@Operation(summary = "Añadir events", description = "Añadir un Evento al listado", tags = { "event" })
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Se ha añadido un evento", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
@@ -53,10 +61,10 @@ public class EventController {
 			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
 	@PostMapping("/save")
 	public ResponseEntity<EventDTO> save(@Valid @RequestBody Event event) {
-		Event newTarea = eventService.save(event);
-		URI ubicacion = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newTarea.getId())
+		Event e = eventService.save(event);
+		URI ubicacion = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(e.getId())
 				.toUri();
-		return ResponseEntity.created(ubicacion).body(mapper.convertToDto(newTarea));
+		return ResponseEntity.created(ubicacion).body(mapper.convertToDto(e));
 	}
 
 }
