@@ -29,7 +29,7 @@ public class EventController {
 	}
 
 	@PostMapping("/save")
-	public EventDTO save(@RequestBody Event event) {
-		return mapper.convertToDto(eventService.save(event));
+	public Event save(@RequestBody Event event) {
+		return eventService.save(event);
 	}
 }
