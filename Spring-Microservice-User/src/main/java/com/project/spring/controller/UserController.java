@@ -5,8 +5,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -60,4 +63,28 @@ public class UserController {
 		return ResponseEntity.created(rute).body(mapper.convertToDto(newTask));
 	}
 
+	@Operation(summary = "Borrar usuario", description = "Borrado de usuario por su id", tags = {
+			"user" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se borra el usuario correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = User.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@DeleteMapping("/delete/{id}")
+	public void delete(@PathVariable Long id) {
+		userService.delete(id);
+
+	}
+
+	@Operation(summary = "Actualizar usuario", description = "Actualizado de usuario por su id", tags = {
+			"user" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha actualizado el usuario correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = User.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@PutMapping
+	public User update(@RequestBody User user) {
+		return this.userService.save(user);
+	}
 }

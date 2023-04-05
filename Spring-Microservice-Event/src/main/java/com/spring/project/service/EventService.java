@@ -20,8 +20,19 @@ public class EventService {
 
 	public Event save(Event event) {
 		Event e = eventRepository.save(event);
-		System.out.println(event.getId());
 		return e;
+	}
+
+	public List<Event> findByGenre(String genre) {
+		return eventRepository.findByGenre(genre);
+	}
+
+	public List<Event> findByName(String name) {
+		return eventRepository.findByName(name);
+	}
+
+	public void delete(Long id) {
+		eventRepository.deleteById(id);
 	}
 
 }
