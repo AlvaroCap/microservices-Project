@@ -22,6 +22,8 @@ public class EventService {
 
 	public Event save(Event event) {
 		Event e = eventRepository.save(event);
+		System.out.println(event.getId());
 		return e;
 	}
+
 }

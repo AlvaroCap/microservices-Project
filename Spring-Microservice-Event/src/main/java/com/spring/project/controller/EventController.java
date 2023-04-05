@@ -1,12 +1,16 @@
 package com.spring.project.controller;
 
+import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
 import com.spring.project.dto.EventDTO;
 import com.spring.project.mapper.EventMapper;
 import com.spring.project.model.Event;
@@ -14,6 +18,7 @@ import com.spring.project.service.EventService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -27,8 +32,7 @@ public class EventController {
 	@Autowired
 	private EventMapper mapper;
 
-	@Operation(summary = "Buscar events", description = "Dado un ID, devuelve un objeto Event", tags = {
-			"event" })
+	@Operation(summary = "Buscar events", description = "Dado un ID, devuelve un objeto Event", tags = { "event" })
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Estudiante localizado", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
@@ -41,7 +45,11 @@ public class EventController {
 	}
 
 	@PostMapping("/save")
-	public Event save(@RequestBody Event event) {
-		return eventService.save(event);
+	public ResponseEntity<EventDTO> save(@Valid @RequestBody Event event) {
+		Event newTarea = eventService.save(event);
+		URI ubicacion = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newTarea.getId())
+				.toUri();
+		return ResponseEntity.created(ubicacion).body(mapper.convertToDto(newTarea));
 	}
+
 }
