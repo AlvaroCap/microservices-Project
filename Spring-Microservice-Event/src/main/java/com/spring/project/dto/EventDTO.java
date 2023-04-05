@@ -12,6 +12,7 @@ import lombok.Setter;
 public class EventDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	private Long id;
 	String name;
 	String shortDesc;
 	String longDesc;
@@ -25,6 +26,14 @@ public class EventDTO implements Serializable {
 
 	public String getName() {
 		return name;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {

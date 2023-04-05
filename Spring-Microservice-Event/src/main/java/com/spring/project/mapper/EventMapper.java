@@ -13,7 +13,7 @@ public class EventMapper {
 
 	public EventDTO convertToDto(Event event) {
 		EventDTO dto = new EventDTO();
-		// productDTO.setId(event.getId());
+		dto.setId(event.getId());
 		dto.setName(event.getName());
 		dto.setShortDesc(event.getShortDesc());
 		dto.setLongDesc(event.getLongDesc());
