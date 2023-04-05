@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.spring.project.dto.EventDTO;
 import com.spring.project.mapper.EventMapper;
@@ -35,7 +34,7 @@ public class EventController {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
 			@ApiResponse(responseCode = "400", description = "No válido (NO implementado) ", content = @Content),
 			@ApiResponse(responseCode = "404", description = "Event no encontrado (NO implementado)", content = @Content) })
-	@GetMapping("/")
+	@GetMapping()
 	public List<EventDTO> findAll() {
 		List<Event> events = eventService.findAll();
 		return mapper.convertToDto(events);
