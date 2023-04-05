@@ -13,8 +13,14 @@ import com.spring.project.mapper.EventMapper;
 import com.spring.project.model.Event;
 import com.spring.project.service.EventService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @RestController
-@RequestMapping("/events")
+@RequestMapping("/event")
 public class EventController {
 
 	@Autowired
@@ -22,6 +28,13 @@ public class EventController {
 	@Autowired
 	private EventMapper mapper;
 
+	@Operation(summary = "Buscar events", description = "Dado un ID, devuelve un objeto Event", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Estudiante localizado", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido (NO implementado) ", content = @Content),
+			@ApiResponse(responseCode = "404", description = "Event no encontrado (NO implementado)", content = @Content) })
 	@GetMapping("/")
 	public List<EventDTO> findAll() {
 		List<Event> events = eventService.findAll();
