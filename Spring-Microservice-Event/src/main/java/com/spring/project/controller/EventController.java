@@ -7,8 +7,11 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -66,4 +69,59 @@ public class EventController {
 		return ResponseEntity.created(ubicacion).body(mapper.convertToDto(e));
 	}
 
+	@Operation(summary = "Listar evento por género", description = "Listado de los eventos según su género", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se listan los eventos por su género correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@GetMapping("/genre/{genre}")
+	public List<EventDTO> findByGenre(@PathVariable String genre) {
+		List<Event> events = eventService.findByGenre(genre);
+		logger.info("------ readStudent (GET) ");
+
+		return mapper.convertToDto(events);
+	}
+
+	@Operation(summary = "Listar evento por nombre", description = "Listado de los eventos según su nombre", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se listan los eventos por su nombre correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@GetMapping("/name/{name}")
+	public List<EventDTO> findByName(@PathVariable String name) {
+		List<Event> events = eventService.findByName(name);
+		logger.info("------ readStudent (GET) ");
+
+		return mapper.convertToDto(events);
+	}
+
+	@Operation(summary = "Borrar evento", description = "Borrado de evento por su id", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se borra el evento correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@DeleteMapping("/delete/{id}")
+	public void delete(@PathVariable Long id) {
+		eventService.delete(id);
+		logger.info("------ readStudent (GET) ");
+
+	}
+
+	@Operation(summary = "Actualizar evento", description = "Actualizado de evento por su id", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha actualizado el evento correctamente", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
+	@PutMapping
+	public Event update(@RequestBody Event event) {
+		return this.eventService.save(event);
+	}
 }

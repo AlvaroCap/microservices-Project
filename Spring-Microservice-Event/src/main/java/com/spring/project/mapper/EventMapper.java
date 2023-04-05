@@ -23,7 +23,7 @@ public class EventMapper {
 		dto.setSiteName(event.getSiteName());
 		dto.setSiteCity(event.getSiteCity());
 		dto.setCapacity(event.getCapacity());
-		dto.setCapacity(event.getCapacity());
+		dto.setGenre(event.getGenre());
 
 		return dto;
 
