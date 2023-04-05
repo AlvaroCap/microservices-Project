@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.spring.project.dto.EventDTO;
-import com.spring.project.error.EventNotFoundException;
 import com.spring.project.mapper.EventMapper;
 import com.spring.project.model.Event;
 import com.spring.project.service.EventService;

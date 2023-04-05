@@ -17,7 +17,7 @@ public class CustomErrorJson {
 
 	// Extras
 	private String jdk;
-	private String infoadicional;
+	// private String infoadicional;
 
 	public CustomErrorJson() {
 		super();
