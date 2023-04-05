@@ -32,18 +32,25 @@ public class EventController {
 	@Autowired
 	private EventMapper mapper;
 
-	@Operation(summary = "Buscar events", description = "Dado un ID, devuelve un objeto Event", tags = { "event" })
+	@Operation(summary = "Listado de Events", description = "Devuelve un listado de los eventos registrados", tags = { "event" })
 	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "Estudiante localizado", content = {
+			@ApiResponse(responseCode = "200", description = "Listado de eventos desplegado", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
-			@ApiResponse(responseCode = "400", description = "No válido (NO implementado) ", content = @Content),
-			@ApiResponse(responseCode = "404", description = "Event no encontrado (NO implementado)", content = @Content) })
+			@ApiResponse(responseCode = "400", description = "No válido", content = @Content),
+			@ApiResponse(responseCode = "404", description = "Ruta no encontrada. No se encuentra el listado de Eventos", content = @Content) })
 	@GetMapping()
 	public List<EventDTO> findAll() {
 		List<Event> events = eventService.findAll();
 		return mapper.convertToDto(events);
 	}
 
+	@Operation(summary = "Añadir events", description = "Añadir un Evento al listado", tags = {
+			"event" })
+	@ApiResponses(value = {
+			@ApiResponse(responseCode = "200", description = "Se ha añadido un evento", content = {
+					@Content(mediaType = "application/json", schema = @Schema(implementation = Event.class)) }),
+			@ApiResponse(responseCode = "400", description = "No válido (NO se ha agregado) ", content = @Content),
+			@ApiResponse(responseCode = "404", description = "No se ha podido añadir, ruta no encontrada", content = @Content) })
 	@PostMapping("/save")
 	public ResponseEntity<EventDTO> save(@Valid @RequestBody Event event) {
 		Event newTarea = eventService.save(event);
