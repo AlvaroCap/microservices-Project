@@ -8,11 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class SpringMicroserviceEventApplicationTests_Verify {
-
-	// Debería acertar aposta para verificar que van bien los test
 	@Test
 	void contextLoads() {
-
 		assertThat(true).isTrue();
 	}
 
