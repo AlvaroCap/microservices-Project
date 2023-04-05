@@ -16,6 +16,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 public class Event {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Long id;
+	String name;
+	String shortDesc;
+	String longDesc;
+	Date date;
+	LocalDateTime schedule;
+	double price;
+	String rules;
+	String siteName;
+	String siteCity;
+	String siteAddress;
+	String siteType;
+	int capacity;
+	String genre;
+
 	public String getName() {
 		return name;
 	}
@@ -127,22 +145,5 @@ public class Event {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long id;
-	String name;
-	String shortDesc;
-	String longDesc;
-	Date date;
-	LocalDateTime schedule;
-	double price;
-	String rules;
-	String siteName;
-	String siteCity;
-	String siteAddress;
-	String siteType;
-	int capacity;
-	String genre;
 
 }
