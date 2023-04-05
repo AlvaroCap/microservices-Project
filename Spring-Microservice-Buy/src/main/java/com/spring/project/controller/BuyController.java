@@ -1,7 +1,6 @@
 package com.spring.project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +16,11 @@ public class BuyController {
 
 	@Autowired
 	private BuyService buyService;
-	
-    @PostMapping
-    public String validateBuy(@RequestBody BuyDTO buyDTO) {
-    	ErrorDTO errorDTO = buyService.consumingApi(buyDTO);
-    	
-    	return buyService.errorHandling(errorDTO);
-    }
+
+	@PostMapping
+	public String validateBuy(@RequestBody BuyDTO buyDTO) {
+		ErrorDTO errorDTO = buyService.consumingApi(buyDTO);
+
+		return buyService.errorHandling(errorDTO);
+	}
 }
