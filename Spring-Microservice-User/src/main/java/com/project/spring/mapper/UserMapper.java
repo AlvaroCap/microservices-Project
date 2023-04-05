@@ -13,7 +13,7 @@ public class UserMapper {
 
 	public UserDTO convertToDto(User user) {
 		UserDTO dto = new UserDTO();
-		// productDTO.setId(event.getId());
+		dto.setId(user.getId());
 		dto.setName(user.getName());
 		dto.setLastName(user.getLastName());
 		dto.setMail(user.getMail());
