@@ -7,11 +7,20 @@ public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	// Atributos
+	private Long id;
 	private String name;
 	private String lastName;
 	private String mail;
 
 	public UserDTO() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	// Constructor con parametros
